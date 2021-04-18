@@ -1,0 +1,70 @@
+:root{
+    --speed: 0;
+}
+.machine{
+    background-color: goldenrod;
+    border: solid brown 3px;
+    height: 300px;
+    width: 900px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.slot{
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    background-color: cornsilk;
+    border: solid brown 2px;
+    font-size: 120px;
+    text-align: center;
+    line-height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#inputspeed{
+    font-size: 30px;
+    margin: 30px;
+    width: 70px;
+}
+#startid{
+    margin: 30px;
+    font-size: 60px;
+    color: black;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#startid:hover{
+    background-color: white;
+}
+#startid:active{
+    background-color: green;
+}
+#stopid{
+    margin: 30px;
+    font-size: 60px;
+    color: black;
+    background-color: crimson;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#stopid:hover{
+    background-color: white;
+}
+#stopid:active{
+    background-color: crimson;
+}
+.slot>.value{
+    animation: slotspin infinite;
+    animation-duration: calc(1s/var(--speed));    /*animation-name  animation-iteration-count  animation-duration*/
+}
+@keyframes slotspin{
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(200px);
+    }
+}
